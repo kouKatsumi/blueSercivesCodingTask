@@ -1,0 +1,1 @@
+protoc.exe --proto_path=src --java_out=src src\Document.proto

@@ -1,0 +1,21 @@
+package blueMedia;
+
+option java_package = "com.blueservices.logic";
+option java_outer_classname = "DocumentMessage";
+
+message Document {
+  required int64 id = 1;
+  required string name = 2;
+  required string content = 3;
+  required State state = 4;
+  optional string reason = 5;
+
+  enum State {
+    CREATED = 0;
+    ACCEPTED = 1;
+    VERIFIED = 2;
+    PUBLISHED = 3;
+    DELETED = 4;
+    REJECTED = 5;
+  }
+}
